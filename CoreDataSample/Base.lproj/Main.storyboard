@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,25 +19,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWa-m9-MxK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWa-m9-MxK">
                                 <rect key="frame" x="16" y="181" width="343" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94149805860000002" green="0.93405903970000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メモ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnB-bo-H2B">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnB-bo-H2B">
                                 <rect key="frame" x="16" y="355" width="343" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="ZBo-bf-MuU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlI-VF-lMt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlI-VF-lMt">
                                 <rect key="frame" x="116" y="472" width="142" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="7Jo-Tm-gvg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,14 +48,27 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gnB-bo-H2B" firstAttribute="centerX" secondItem="rlI-VF-lMt" secondAttribute="centerX" id="2qk-bb-dGN"/>
+                            <constraint firstItem="GWa-m9-MxK" firstAttribute="trailing" secondItem="gnB-bo-H2B" secondAttribute="trailing" id="3fy-gX-E6N"/>
+                            <constraint firstItem="GWa-m9-MxK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Nq3-nk-hXZ"/>
+                            <constraint firstItem="gnB-bo-H2B" firstAttribute="top" secondItem="GWa-m9-MxK" secondAttribute="bottom" constant="8" symbolic="YES" id="QwL-nl-qxv"/>
+                            <constraint firstItem="GWa-m9-MxK" firstAttribute="leading" secondItem="gnB-bo-H2B" secondAttribute="leading" id="YOQ-hS-Q03"/>
+                            <constraint firstItem="rlI-VF-lMt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="gIT-TX-AlG"/>
+                            <constraint firstItem="rlI-VF-lMt" firstAttribute="top" secondItem="gnB-bo-H2B" secondAttribute="bottom" constant="93" id="hdJ-qF-sUf"/>
+                            <constraint firstItem="GWa-m9-MxK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hdk-9C-UXw"/>
+                            <constraint firstItem="GWa-m9-MxK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="117" id="iU5-ae-AEq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rlI-VF-lMt" secondAttribute="bottom" constant="130" id="zts-QX-g3O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Question" id="nPK-Xw-U3Z">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Icc-uw-9UT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Icc-uw-9UT">
+                            <connections>
+                                <segue destination="nMo-Jc-CoP" kind="show" id="gdO-3a-iJa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="nMo-Jc-CoP" kind="show" id="e0i-p3-0Fz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +77,7 @@
         <!--List-->
         <scene sceneID="x0v-Ms-wHh">
             <objects>
-                <tableViewController id="nMo-Jc-CoP" sceneMemberID="viewController">
+                <tableViewController id="nMo-Jc-CoP" customClass="TableViewController" customModule="CoreDataSample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mw7-9U-N3H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +98,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="List" id="gHs-BF-udQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cFi-9N-LQI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cFi-9N-LQI">
+                            <connections>
+                                <action selector="AddQuestion:" destination="nMo-Jc-CoP" id="Xl0-z8-CWF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Efh-Fb-OZv" userLabel="First Responder" sceneMemberID="firstResponder"/>

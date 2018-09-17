@@ -13,6 +13,8 @@
 		B72A35A7214F90680099E193 /* CoreDataSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B72A35A5214F90680099E193 /* CoreDataSample.xcdatamodeld */; };
 		B72A35A9214F906A0099E193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72A35A8214F906A0099E193 /* Assets.xcassets */; };
 		B72A35AC214F906A0099E193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72A35AA214F906A0099E193 /* LaunchScreen.storyboard */; };
+		B72A35B4214FA2780099E193 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A35B3214FA2780099E193 /* TableViewController.swift */; };
+		B72A35B6214FAB8D0099E193 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A35B5214FAB8D0099E193 /* CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B72A35A8214F906A0099E193 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B72A35AB214F906A0099E193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B72A35AD214F906A0099E193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B72A35B3214FA2780099E193 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B72A35B5214FAB8D0099E193 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				B72A359E214F90680099E193 /* AppDelegate.swift */,
 				B72A35A0214F90680099E193 /* ViewController.swift */,
 				B72A35A2214F90680099E193 /* Main.storyboard */,
+				B72A35B5214FAB8D0099E193 /* CoreData.swift */,
+				B72A35B3214FA2780099E193 /* TableViewController.swift */,
 				B72A35A8214F906A0099E193 /* Assets.xcassets */,
 				B72A35AA214F906A0099E193 /* LaunchScreen.storyboard */,
 				B72A35AD214F906A0099E193 /* Info.plist */,
@@ -141,6 +147,8 @@
 				B72A35A1214F90680099E193 /* ViewController.swift in Sources */,
 				B72A35A7214F90680099E193 /* CoreDataSample.xcdatamodeld in Sources */,
 				B72A359F214F90680099E193 /* AppDelegate.swift in Sources */,
+				B72A35B4214FA2780099E193 /* TableViewController.swift in Sources */,
+				B72A35B6214FAB8D0099E193 /* CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
