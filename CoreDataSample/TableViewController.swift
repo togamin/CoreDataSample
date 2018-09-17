@@ -10,10 +10,13 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var QList:[question]!
+    @IBOutlet var myTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        //tableViewが読み込まれた時に、CoreDataからデータを読み出し、テーブルViewに表示。
+        self.QList = Qread()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,20 +27,21 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return self.QList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        
+        cell.textLabel?.text = self.QList[indexPath.row].question
+        cell.detailTextLabel?.text = self.QList[indexPath.row].memo
 
         return cell
     }
@@ -47,11 +51,12 @@ class TableViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in
             //OKボタンを押したときの処理。
             //CoreDataに登録
-            
+            Qregist(question: alert.textFields![0].text!,memo:alert.textFields![1].text!)
             //CoreDataから再びデータを読み込む
-            
+            self.QList = Qread()
             //TableViewのリロード
-            
+            self.myTableView.reloadData()
+
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
         //アラートにテキスト追加
